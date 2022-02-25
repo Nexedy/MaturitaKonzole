@@ -11,19 +11,51 @@ namespace MaturitaKonzole
     {
         static void Main(string[] args)
         {
-
-            using (StreamWriter sw = new StreamWriter(@"název souboru"))
+            //streamReader
+            string cesta = @"C:\Users\frand\source\repos\MaturitaKonzole\Pokus.txt";
+            string imput = "";
+            using (StreamReader sr = File.OpenText(cesta))
             {
-                int n;
-
-                if (n % 2 == 0)
+                while ((imput = sr.ReadLine()) != null)
                 {
-                    Console.WriteLine(n);
+                    Console.WriteLine(imput);
                 }
-
-                Console.WriteLine("Tohle jsou prvočísla ze souboru: {0} ", n);
+                Console.WriteLine();
             }
 
+            //string to int
+            int cisla = Convert.ToInt32(imput);
+
+            //pravidla pro prvočísla
+           
+            
+
+                if (cisla % 2 == 0)
+                {
+                    Console.WriteLine("Číslo není prvočíslo.");
+                }
+
+                else if (cisla == 3)
+                {
+                    Console.WriteLine("Číslo je prvočíslo.");
+                }
+
+                else if (cisla % 3 == 0)
+                {
+                    Console.WriteLine("Cislo není prvočíslo.");
+                }
+
+                else if (cisla % 5 == 0)
+                {
+                    Console.WriteLine("Cislo není prvočíslo.");
+                }
+
+                else Console.WriteLine("Číslo je prvočíslo.");
+
+            
+
+            //čtení do konzole
+            Console.Read();
         }
     }
 }
