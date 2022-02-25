@@ -33,6 +33,12 @@ namespace MaturitaKonzole
                 Console.WriteLine("Číslo {0} není prvočíslo.", n);
             }
 
+            else if (n % 7 == 0)
+            {
+                Console.WriteLine("Číslo {0} není prvočíslo.", n);
+                
+            }
+
             else Console.WriteLine("Číslo {0} je prvočíslo.", n);
 
             Console.ReadLine();
