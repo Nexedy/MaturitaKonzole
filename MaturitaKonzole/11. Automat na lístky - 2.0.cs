@@ -14,38 +14,33 @@ namespace MaturitaKonzole
             Console.WriteLine("Zadejte vzdálenost");
             int a = int.Parse(Console.ReadLine());
 
-            if (a < 8)
+            if (a <= 3)
             {
-                if (a < 7)
-                {
-                    if (a < 5)
-                    {
-                        if (a < 3)
-                        {
-                            Console.WriteLine("Jízdenka" +
-                             "---------------------" +
-                                "Vzdálenost: 1-3 km" +
-                                 "Cena: 15.KČ");
-                        }
-
-
-                    }
-                    else Console.WriteLine("Jízdenka" +
-                    "---------------------" +
-                    "Vzdálenost: 4-5 km" +
-                    "Cena: 13.KČ");
-                }
-
-                else Console.WriteLine("Jízdenka" +
-                        "---------------------" +
-                        "Vzdálenost: 6-7 km " +
-                        "Cena: 11.KČ");
+                Console.WriteLine("Jízdenka:");
+                Console.WriteLine("Km: {0}", a);
+                Console.WriteLine("Cena: {0}",a * 15);
             }
 
-            else Console.WriteLine("Jízdenka" +
-                         "---------------------" +
-                         "Vzdálenost: 8+ km" +
-                         "Cena: 10.KČ"); ;
+            if (a > 3 && a <= 5)
+            {
+                Console.WriteLine("Jízdenka:");
+                Console.WriteLine("Km: {0}", a);
+                Console.WriteLine("Cena: {0}", a * 13);
+            }
+
+            if (a > 5 && a <= 7)
+            {
+                Console.WriteLine("Jízdenka:");
+                Console.WriteLine("Km: {0}", a);
+                Console.WriteLine("Cena: {0}", a * 11);
+            }
+
+            if (a >= 8)
+            {
+                Console.WriteLine("Jízdenka:");
+                Console.WriteLine("Km: {0}", a);
+                Console.WriteLine("Cena: {0}", a * 10);
+            }
 
             Console.Read();
         }

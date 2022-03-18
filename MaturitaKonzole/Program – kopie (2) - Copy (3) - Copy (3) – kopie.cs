@@ -10,6 +10,9 @@ namespace MaturitaKonzole
     {
         static void Main(string[] args)
         {
+
+            
+
         }
     }
 }
